@@ -5,7 +5,7 @@ require_once(dirname(__FILE__).'/ISuperOrganization.interface.php');
 /**
  * interface ISuperOrganizationDAO
  *
- * superorganizationƒe[ƒuƒ‹‚ÌData Access Object‚ÌƒCƒ“ƒ^[ƒtƒFƒCƒX(API’è‹`)
+ * superorganizationãƒ†ãƒ¼ãƒ–ãƒ«ã®Data Access Objectã®ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹(APIå®šç¾©)
  *
  * @author : TOIDA Yuto 2014/11/19
 */
@@ -14,55 +14,55 @@ interface ISuperOrganizationDAO
 {
 
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^ ISuperOrganizatinDAOƒCƒ“ƒ^[ƒtƒFƒCƒX‚ğÀ‘•‚µ‚½ƒNƒ‰ƒX‚ÌƒIƒuƒWƒFƒNƒg‚ğ‰Šú‰»‚·‚é
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Íˆø”‚Ì&$PDOObject‚ğ•ÏX‚µ‚È‚¢‚æ‚¤‚ÉÀ‘•‚³‚ê‚é
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ ISuperOrganizatinDAOã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹ã‚’å®Ÿè£…ã—ãŸã‚¯ãƒ©ã‚¹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’åˆæœŸåŒ–ã™ã‚‹
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã¯å¼•æ•°ã®&$PDOObjectã‚’å¤‰æ›´ã—ãªã„ã‚ˆã†ã«å®Ÿè£…ã•ã‚Œã‚‹
 	 *
-	 * @param PDO &$PDOObject superorganizationƒe[ƒuƒ‹‚Ì‘¶İ‚·‚éƒf[ƒ^ƒx[ƒX‚ÖƒAƒNƒZƒX‰Â”\‚ÈPDOƒIƒuƒWƒFƒNƒg
+	 * @param PDO &$PDOObject superorganizationãƒ†ãƒ¼ãƒ–ãƒ«ã®å­˜åœ¨ã™ã‚‹ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã¸ã‚¢ã‚¯ã‚»ã‚¹å¯èƒ½ãªPDOã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 	 */
 	public function __construct(&$PDOObject);
 	
 	/**
-	 * ƒŒƒR[ƒhID‚ğw’è‚µ‚ÄISuperOrganizationƒCƒ“ƒ^[ƒtƒFƒCƒX‚ğÀ‘•‚µ‚½ƒNƒ‰ƒX‚ÌƒIƒuƒWƒFƒNƒg‚ğæ“¾‚·‚é
+	 * ãƒ¬ã‚³ãƒ¼ãƒ‰IDã‚’æŒ‡å®šã—ã¦ISuperOrganizationã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹ã‚’å®Ÿè£…ã—ãŸã‚¯ãƒ©ã‚¹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—ã™ã‚‹
 	 *
-	 * @param int $id SELECT‚·‚éÛ‚Ég—p‚·‚ésuperorganization_id
-	 * @return ISuperOrganization $id‚É‘Î‰‚·‚éƒŒƒR[ƒh
+	 * @param int $id SELECTã™ã‚‹éš›ã«ä½¿ç”¨ã™ã‚‹superorganization_id
+	 * @return ISuperOrganization $idã«å¯¾å¿œã™ã‚‹ãƒ¬ã‚³ãƒ¼ãƒ‰
 	 */
 	public function selectSuperOrganizationById($id);
 
 	/**
-	 * superorganizationƒe[ƒuƒ‹‚É‘¶İ‚·‚é‘S‚Ä‚ÌƒŒƒR[ƒh‚ğæ“¾‚·‚é
+	 * superorganizationãƒ†ãƒ¼ãƒ–ãƒ«ã«å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ãƒ¬ã‚³ãƒ¼ãƒ‰ã‚’å–å¾—ã™ã‚‹
 	 *
-	 * @return array superorganizationƒe[ƒuƒ‹‚Ì‘SƒŒƒR[ƒh‚ğISuperOrganizationƒCƒ“ƒ^[ƒtƒFƒCƒX‚ğÀ‘•‚µ‚½ƒNƒ‰ƒX‚ÌƒIƒuƒWƒFƒNƒg”z—ñ‚Å•Ô‚·
+	 * @return array superorganizationãƒ†ãƒ¼ãƒ–ãƒ«ã®å…¨ãƒ¬ã‚³ãƒ¼ãƒ‰ã‚’ISuperOrganizationã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹ã‚’å®Ÿè£…ã—ãŸã‚¯ãƒ©ã‚¹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆé…åˆ—ã§è¿”ã™
 	 */
 	public function selectAllSuperOrganizations();
 
 	/**
-	 * ISuperOrganizationƒIƒuƒWƒFƒNƒg‚ğƒf[ƒ^ƒx[ƒX‚ÉINSERT‚·‚é
+	 * ISuperOrganizationã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«INSERTã™ã‚‹
 	 *
-	 * @param ISuperOrganization &$superOrganization ƒf[ƒ^ƒx[ƒX‚ÉINSERT‚·‚éƒf[ƒ^‚ğ“ü—Í‚µ‚½ISuperOrganizationƒIƒuƒWƒFƒNƒg id‚Ì’l‚Í–³‹‚³‚ê‚é
+	 * @param ISuperOrganization &$superOrganization ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«INSERTã™ã‚‹ãƒ‡ãƒ¼ã‚¿ã‚’å…¥åŠ›ã—ãŸISuperOrganizationã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ idã®å€¤ã¯ç„¡è¦–ã•ã‚Œã‚‹
 	 */
 	public function insertSuperOrganization(&$superOrganization);
 
 	/**
-	 * ˆø”‚ÌISsuperOrganizationƒIƒuƒWƒFƒNƒg‚ÌID‚ğ‚Á‚½ƒŒƒR[ƒh‚ğˆø”‚Ì‚»‚Ì‘¼‚Ì’l‚ÅUPDATE‚·‚é
-	 * &$superOrganizationƒIƒuƒWƒFƒNƒg‚Í•ÏX‚³‚ê‚È‚¢‚æ‚¤‚ÉÀ‘•‚³‚ê‚é
+	 * å¼•æ•°ã®ISsuperOrganizationã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®IDã‚’æŒã£ãŸãƒ¬ã‚³ãƒ¼ãƒ‰ã‚’å¼•æ•°ã®ãã®ä»–ã®å€¤ã§UPDATEã™ã‚‹
+	 * &$superOrganizationã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¯å¤‰æ›´ã•ã‚Œãªã„ã‚ˆã†ã«å®Ÿè£…ã•ã‚Œã‚‹
 	 *
-	 * @param ISuperOrganization &$superOrganization UPDATE‚·‚éƒf[ƒ^‚ğ“ü—Í‚µ‚½ISuperOrganizationƒIƒuƒWƒFƒNƒg
+	 * @param ISuperOrganization &$superOrganization UPDATEã™ã‚‹ãƒ‡ãƒ¼ã‚¿ã‚’å…¥åŠ›ã—ãŸISuperOrganizationã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 	 */
 	public function updateSuperOrganization(&$superOrganization);
 
 	/**
-	 * ID‚Åw’è‚µ‚½ƒŒƒR[ƒh‚ğDELETE‚·‚é
+	 * IDã§æŒ‡å®šã—ãŸãƒ¬ã‚³ãƒ¼ãƒ‰ã‚’DELETEã™ã‚‹
 	 *
-	 * @param int $id DELETE‚·‚éƒŒƒR[ƒh‚Ìid
+	 * @param int $id DELETEã™ã‚‹ãƒ¬ã‚³ãƒ¼ãƒ‰ã®id
 	 */
 	public function deleteSuperOrganizationById($id);
 
 	/**
-	 * ˆø”‚Æ‘S‚Ä‚Ì’l‚ª“¯‚¶ƒŒƒR[ƒh‚ğDELETE‚·‚é
-	 * &$superOrganizationƒIƒuƒWƒFƒNƒg‚Í•ÏX‚³‚ê‚È‚¢‚æ‚¤‚ÉÀ‘•‚³‚ê‚é
+	 * å¼•æ•°ã¨å…¨ã¦ã®å€¤ãŒåŒã˜ãƒ¬ã‚³ãƒ¼ãƒ‰ã‚’DELETEã™ã‚‹
+	 * &$superOrganizationã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¯å¤‰æ›´ã•ã‚Œãªã„ã‚ˆã†ã«å®Ÿè£…ã•ã‚Œã‚‹
 	 *
-	 * @param ISuperOrganization &$superOrganization DELETE‚·‚éƒŒƒR[ƒh‚Æˆê’v‚·‚éISuperOrganizationƒIƒuƒWƒFƒNƒg
+	 * @param ISuperOrganization &$superOrganization DELETEã™ã‚‹ãƒ¬ã‚³ãƒ¼ãƒ‰ã¨ä¸€è‡´ã™ã‚‹ISuperOrganizationã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 	 */
 	public function deleteSuperOrganizationByInstance(&$superOrganization);
 };

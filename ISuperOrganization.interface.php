@@ -3,7 +3,7 @@
 /**
  * interface ISuperOrganization
  *
- * superorganizationƒe[ƒuƒ‹‚ÌData Transfer Object‚ÌƒCƒ“ƒ^[ƒtƒFƒCƒX(API’è‹`)
+ * superorganizationãƒ†ãƒ¼ãƒ–ãƒ«ã®Data Transfer Objectã®ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹(APIå®šç¾©)
  *
  * @author : TOIDA Yuto 2014/11/19
 */
@@ -12,56 +12,56 @@ interface ISuperOrganization
 {
 
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^ superorganization‚ÌƒvƒƒpƒeƒB‚ğ‰Šú‰»‚·‚é
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ superorganizationã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’åˆæœŸåŒ–ã™ã‚‹
 	 *
-	 * @param string $name_ja “ú–{Œê•\¦–¼ 
-	 * @param string $name_en ‰pŒê•\¦–¼ 
-	 * @param string $id = null (ƒIƒvƒVƒ‡ƒ“, ƒfƒtƒHƒ‹ƒg’l = null) ƒŒƒR[ƒhID
+	 * @param string $name_ja æ—¥æœ¬èªè¡¨ç¤ºå 
+	 * @param string $name_en è‹±èªè¡¨ç¤ºå 
+	 * @param string $id = null (ã‚ªãƒ—ã‚·ãƒ§ãƒ³, ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤ = null) ãƒ¬ã‚³ãƒ¼ãƒ‰ID
 	 */
 	public function __construct($name_ja, $name_en, $id = null);
 
 	/**
-	 * ƒIƒuƒWƒFƒNƒg‚ÌID‚ğæ“¾‚·‚é
-	 * –{‘€ì‚ÍƒIƒuƒWƒFƒNƒg‚ğ•ÏX‚µ‚È‚¢‚æ‚¤‚ÉÀ‘•‚³‚ê‚é
+	 * ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®IDã‚’å–å¾—ã™ã‚‹
+	 * æœ¬æ“ä½œã¯ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å¤‰æ›´ã—ãªã„ã‚ˆã†ã«å®Ÿè£…ã•ã‚Œã‚‹
 	 *
-	 * @return int ƒIƒuƒWƒFƒNƒg‚ÌID ID‚ªƒZƒbƒg‚³‚ê‚Ä‚¢‚È‚¢ê‡‚Ínull‚ğ•Ô‚·
+	 * @return int ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ID IDãŒã‚»ãƒƒãƒˆã•ã‚Œã¦ã„ãªã„å ´åˆã¯nullã‚’è¿”ã™
 	 */
 	public function getId();
 
 	/**
-	 * ƒIƒuƒWƒFƒNƒg‚ÌID‚ğİ’è‚·‚é
+	 * ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®IDã‚’è¨­å®šã™ã‚‹
 	 *
-	 * @param int $id ƒIƒuƒWƒFƒNƒg‚ÉƒZƒbƒg‚·‚éƒŒƒR[ƒhID
+	 * @param int $id ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã‚»ãƒƒãƒˆã™ã‚‹ãƒ¬ã‚³ãƒ¼ãƒ‰ID
 	 */
 	public function setId($id);
 
 	/**
-	 * ƒIƒuƒWƒFƒNƒg‚Ì“ú–{Œê•\¦–¼‚ğæ“¾‚·‚é
-	 * –{‘€ì‚ÍƒIƒuƒWƒFƒNƒg‚ğ•ÏX‚µ‚È‚¢‚æ‚¤‚ÉÀ‘•‚³‚ê‚é
+	 * ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ—¥æœ¬èªè¡¨ç¤ºåã‚’å–å¾—ã™ã‚‹
+	 * æœ¬æ“ä½œã¯ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å¤‰æ›´ã—ãªã„ã‚ˆã†ã«å®Ÿè£…ã•ã‚Œã‚‹
 	 *
-	 * @return string ƒIƒuƒWƒFƒNƒg‚Ì“ú–{Œê•\¦–¼‚ğ•Ô‚·
+	 * @return string ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ—¥æœ¬èªè¡¨ç¤ºåã‚’è¿”ã™
 	 */
 	public function getNameJa();
 
 	/**
-	 * ƒIƒuƒWƒFƒNƒg‚Ì“ú–{Œê•\¦–¼‚ğİ’è‚·‚é
+	 * ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ—¥æœ¬èªè¡¨ç¤ºåã‚’è¨­å®šã™ã‚‹
 	 *
-	 * @param string $name_ja ƒIƒuƒWƒFƒNƒg‚É“ú–{Œê•\¦–¼‚ğİ’è‚·‚é
+	 * @param string $name_ja ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«æ—¥æœ¬èªè¡¨ç¤ºåã‚’è¨­å®šã™ã‚‹
 	 */
 	public function setNameJa($name_ja);
 
 	/**
-	 * ƒIƒuƒWƒFƒNƒg‚Ì‰pŒê•\¦–¼‚ğæ“¾‚·‚é
-	 * –{‘€ì‚ÍƒIƒuƒWƒFƒNƒg‚ğ•ÏX‚µ‚È‚¢‚æ‚¤‚ÉÀ‘•‚³‚ê‚é
+	 * ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®è‹±èªè¡¨ç¤ºåã‚’å–å¾—ã™ã‚‹
+	 * æœ¬æ“ä½œã¯ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å¤‰æ›´ã—ãªã„ã‚ˆã†ã«å®Ÿè£…ã•ã‚Œã‚‹
 	 *
-	 * @return string ƒIƒuƒWƒFƒNƒg‚Ì‰pŒê•\¦–¼‚ğ•Ô‚·
+	 * @return string ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®è‹±èªè¡¨ç¤ºåã‚’è¿”ã™
 	 */
 	public function getNameEn();
 
 	/**
-	 * ƒIƒuƒWƒFƒNƒg‚Ì‰pŒê•\¦–¼‚ğİ’è‚·‚é
+	 * ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®è‹±èªè¡¨ç¤ºåã‚’è¨­å®šã™ã‚‹
 	 *
-	 * @param string $name_en ƒIƒuƒWƒFƒNƒg‚É‰pŒê•\¦–¼‚ğİ’è‚·‚é
+	 * @param string $name_en ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«è‹±èªè¡¨ç¤ºåã‚’è¨­å®šã™ã‚‹
 	 */
 	public function setNameEn($name_en);
 };
